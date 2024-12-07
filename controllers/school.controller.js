@@ -16,21 +16,18 @@ const getAllSchools = async(req, res, next) => {
 };
 
 const getSchoolById = async(req, res, next) => {
-  const schoolId = req.params.id;
-const school = await School.findById(schoolId);
-    res.json(school);
+  const id = req.params.id;
+  const school = await
+  School.findById(id);
+  res.json(school); // dummy function for now
 }
 
-const updateSchool = async(req, res, next) => {
-  const schoolId = req.params.id;
-  const school = await School.findByIdAndUpdate
+const updateSchool = (req, res, next) => {
+  res.json({message: "PUT school"}); // dummy function for now
 }
 
-const deleteSchool = async(req, res, next) => {
-  const schoolId = req.params.id;
-  const school = await School.findByIdAndDelete(schoolId);
-  res.json(school)
+const deleteSchool = (req, res, next) => {
+  res.json({message: "DELETE school"}); // dummy function for now
 }
 
-
-module.exports = {newSchool, getAllSchools, getSchoolById, updateSchool, deleteSchool}; // export to use in school.js
+module.exports = {newSchool, getAllSchools, getSchoolById, updateSchool, deleteSchool }; // export to use in school.js
