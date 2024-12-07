@@ -5,7 +5,7 @@ const School = require('../models/school');
 // 1.
 const router  = express.Router();
 // 2.
-const { getAllSchools, newSchool } = require("../controllers/school.controller");
+const { getAllSchools, newSchool, getSchoolById, updateSchool, deleteSchool } = require("../controllers/school.controller");
 // import { getAllSchools, newSchool } from "../controllers/school.controller";
 
 // 3.
