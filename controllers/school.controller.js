@@ -15,4 +15,22 @@ const getAllSchools = async(req, res, next) => {
   res.json(schools); // dummy function for now
 };
 
-module.exports = {newSchool, getAllSchools}; // export to use in school.js
+const getSchoolById = async(req, res, next) => {
+  const schoolId = req.params.id;
+const school = await School.findById(schoolId);
+    res.json(school);
+}
+
+const updateSchool = async(req, res, next) => {
+  const schoolId = req.params.id;
+  const school = await School.findByIdAndUpdate
+}
+
+const deleteSchool = async(req, res, next) => {
+  const schoolId = req.params.id;
+  const school = await School.findByIdAndDelete(schoolId);
+  res.json(school)
+}
+
+
+module.exports = {newSchool, getAllSchools, getSchoolById, updateSchool, deleteSchool}; // export to use in school.js
