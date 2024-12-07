@@ -6,7 +6,6 @@ const School = require('../models/school');
 const router  = express.Router();
 // 2.
 const { getAllSchools, newSchool, getSchoolById, updateSchool, deleteSchool } = require("../controllers/school.controller");
-// import { getAllSchools, newSchool } from "../controllers/school.controller";
 
 // 3.
 router.get('/school', getAllSchools);
